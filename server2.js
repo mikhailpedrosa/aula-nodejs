@@ -1,8 +1,8 @@
 const {createServer} = require('node:http');
 
-const users = new Users();
 
-const Users = require('./routes/users')
+const Users = require('./routes/users');
+const users = new Users();
 const host = "localhost";
 const port = 3000;
 
