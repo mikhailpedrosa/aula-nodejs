@@ -1,6 +1,8 @@
 const {createServer} = require('node:http');
 
-const Users = require('./users')
+const users = new Users();
+
+const Users = require('./routes/users')
 const host = "localhost";
 const port = 3000;
 
@@ -19,11 +21,13 @@ const server = createServer((req, res) => {
     if (method === 'GET' && url === '/users') {
         res.writeHead(200, {'Content-type':'application/json'});
         return res.end(JSON.stringify(Users.get()));
+        //return users.get();
     };
 
     if (method === 'POST' && url === '/users') {
         res.writeHead(200, {'Content-type':'text/plain'});
         Users.post();
+        //return Users.post();
         return res.end('Usuario Adicionado.');
     };
 
@@ -31,7 +35,7 @@ const server = createServer((req, res) => {
         res.writeHead(200, {'Content-type':'text/plain'});
         
         Users.put();
-
+        //return Users.put();
         return res.end('Usuario Altereado.');
     };
 
@@ -39,7 +43,7 @@ const server = createServer((req, res) => {
         res.writeHead(200, {'Content-type':'text/plain'});
 
         Users.delete();
-
+        // return Users.delete();
         return res.end('Usuario Excluido.');
     };
 

@@ -34,6 +34,7 @@ class Users {
     };
     static delete(index){
         Users.list.splice(index, 1);
+        //Users.list.pop();
     };
 }
 

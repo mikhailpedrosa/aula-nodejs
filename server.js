@@ -88,6 +88,13 @@ server.listen(port,host,()=>{
 
 console.log("Hello World");
 
-//HEAD - STATUS CODE (exemplo: 200, 404, 500)
+// HEAD - STATUS CODE (exemplo: 200, 404, 500)
 
-//HEADER - CONTENT TYPE: 
+// HEADER - CONTENT TYPE: 
+
+// BODY
+
+// C - CREATE - POST
+// R - READ - GET
+// U - UPDATE - PUT/PATCH
+// D - DELETE - DELETE
